@@ -1,4 +1,4 @@
-
+use these commands after configuration of your AWS credentials
 aws ec2 create-key-pair --key-name task3 > task3key.pem
  
 aws ec2 create-security-group --group-name task3 --description "security group for task3" > grp.txt
