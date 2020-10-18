@@ -1,0 +1,12 @@
+
+aws ec2 create-key-pair --key-name task3 > task3key.pem
+ 
+aws ec2 create-security-group --group-name task3 --description "security group for task3" > grp.txt
+aws ec2 authorize-security-group-ingress --group-id <group id> --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+aws ec2 run-instances   --security-group-ids <groupid>  --instance-type t2.micro --image-id ami-03cfb5e1fb4fac428   --key-name task3 > launch.txt 
+
+aws ec2 create-volume --volume-type gp2 --size 10 --availability-zone ap-south-1a > vol.txt
+
+
+aws ec2  attach-volume   --volume-id <volumeid>  --instance-id <instance id> --device xvdf > att.txt
