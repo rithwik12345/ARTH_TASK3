@@ -1,4 +1,4 @@
-# ARTH_TASK3
+# ARTH_TASK3.2
 Create a key pair 
 Create a security group 
 Launch an instance using the above created key pair and security group.
